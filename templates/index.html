@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(30, 140, 32);
+      }
+    </style>
+
+    <style>
+      .content {
+        max-width: 500px;
+        margin: auto;
+      }
+      .bg-img {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.71),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("static/css/front.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+
+    <title>TOMATO DISEASE</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/e48d166edc.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="index-main">
+          <div style="width: 100%; padding-top: 5%">
+            <div class="header-content">
+              <h1 style="text-align: center; color: white">
+                <span class="header-content-text"
+                  >Upload Diseased Leaf Image</span
+                >
+              </h1>
+            </div>
+          </div>
+
+          <div class="upload-section">
+            <div class="upload-file">
+              <form
+                class="file-form"
+                action="/success"
+                method="post"
+                ,
+                enctype="multipart/form-data"
+              >
+                <input class="file-form-input" type="file" , name="file" />
+                <button class="btn btn-success btn-lg">Upload</button>
+              </form>
+            </div>
+
+            <div class="header-content-sub">
+              <!-- <p
+                style="text-align: center; margin-top: 15px; color: red"
+                class="header-content-info"
+              >
+                {{error}}
+              </p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h1>Common Diseases In Tomato Leaves</h1>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/tomato_bacterial-spot.jpg" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato bacterial spot</h2>
+                <p>
+                  Bacterial spot of tomato is a potentially devastating disease
+                  that, in severe cases......
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease1') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/early-blight.jpg" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato early blight</h2>
+                <p>
+                  Early blight is a common tomato disease caused by the fungus
+                  Alternaria solani. It can affect almost......
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease2') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/healthy_leaf.jpg" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato healthy Leaf</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Quaerat velit qui quos repellat nulla cum soluta exceptu
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease3') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/leaf_mold.jpg" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato leaf mold</h2>
+                <p>
+                  Tomato leaf mold is a foliar disease that is especially
+                  problematic in greenhouse and high tunnels. It was......
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease5') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/septorial_leaf_spot.jpg" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato septorial leaf spot</h2>
+                <p>
+                  Septoria leaf spot is caused by the fungus Septoria
+                  lycopersici. This fungus can attack tomatoes at......
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease7') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/tomato-spider-mite.png" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato spider mite</h2>
+                <p>
+                  Tomato red spider mite, (Tetranychus evansi) is an established
+                  plant pest in NSW. It is a small, red coloured......
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease8') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/tomato-late-blight.jpg" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato late blight</h2>
+                <p>
+                  Late blight is a potentially devastating disease of tomato and
+                  potato, infecting leaves, stems......
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease4') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/tomato_mosaic_virus.jpg" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato mosaic virus</h2>
+                <p>
+                  Tomato mosaic virus (ToMV) is a plant pathogenic virus. It is
+                  found worldwide and affects tomatoes and many other plants.It
+                  is......
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease6') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/Tomato_target_spot.png" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato target spot</h2>
+                <p>
+                  Target spot of tomato is caused by the fungal pathogen
+                  Corynespora cassiicola. 1 The disease occurs on
+                  field-grown......
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease9') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="effect">
+            <div class="effect-img">
+              <img src="../static/img/tomato_yellow_leaf_curl.jpg" alt="" />
+            </div>
+            <div class="effect-text">
+              <div class="inner">
+                <h2>Tomato yellow leaf curl</h2>
+                <p>
+                  Tomato yellow leaf curl virus (TYLCV) is a DNA virus from the
+                  genus Begomovirus and the family......
+                </p>
+                <div class="effect-btn">
+                  <a href="{{ url_for('disease10') }}" class="btn"
+                    ><i class="fa fa-eye"></i> Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
